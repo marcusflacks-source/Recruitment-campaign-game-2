@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://betterhomes.dev/games/cast-for-the-catch/catches.schema.json",
+  "title": "cast for the catch — catch content config",
+  "description": "Marketing-editable catch pool. Edit proof facts, tune base values, add catches — no code change required. Validated at load by src/content/catches.ts.",
+  "type": "object",
+  "required": ["version", "gameId", "catches"],
+  "additionalProperties": true,
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Bump when the content meaningfully changes (used for cache-busting)."
+    },
+    "gameId": {
+      "type": "string",
+      "const": "cast-for-the-catch"
+    },
+    "catches": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "$ref": "#/definitions/catch" }
+    }
+  },
+  "definitions": {
+    "catch": {
+      "type": "object",
+      "required": ["id", "label", "rarity", "baseValue", "proofFact"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Stable id. Used in telemetry/analytics — do not reuse or rename casually."
+        },
+        "label": {
+          "type": "string",
+          "description": "The 'better' shown to the player. Sentence case, no ALL CAPS.",
+          "maxLength": 40
+        },
+        "rarity": {
+          "type": "string",
+          "enum": ["common", "uncommon", "rare", "epic", "legendary"],
+          "description": "Drives catch probability and difficulty of landing. Rarer = harder + higher value."
+        },
+        "baseValue": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5000,
+          "description": "Base points before combo and timing bonus."
+        },
+        "proofFact": {
+          "type": "string",
+          "description": "One-line proof fact. Short, sentence case, on-brand (intelligent, witty, confident).",
+          "maxLength": 160
+        },
+        "optionalReward": {
+          "$ref": "#/definitions/reward"
+        }
+      }
+    },
+    "reward": {
+      "type": "object",
+      "required": ["type", "label", "triggersLeadCapture"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "type": "string" },
+        "label": { "type": "string" },
+        "triggersLeadCapture": {
+          "type": "boolean",
+          "description": "If true, landing this catch opens the shared lead-capture form with the reward pre-attached."
+        },
+        "ctaLabel": { "type": "string" }
+      }
+    }
+  }
+}

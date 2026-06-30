@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no"
+    />
+    <title>cast for the catch · betterhomes</title>
+    <meta name="theme-color" content="#1F343F" />
+    <meta property="og:title" content="cast for the catch · betterhomes" />
+    <meta property="og:description" content="Every broker has a ceiling. We know how to break it." />
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        background: #1f343f;
+        font-family: 'Segoe UI', system-ui, sans-serif;
+        overscroll-behavior: none;
+      }
+      /* The hub owns the page; here we emulate its portrait mount point. */
+      #hub-stage {
+        position: relative;
+        width: min(100vw, 480px);
+        height: 100dvh;
+        max-height: 100dvh;
+        margin: 0 auto;
+        background: #ede8e4;
+        overflow: hidden;
+      }
+      .dev-note {
+        position: fixed;
+        bottom: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 11px;
+        color: #7ba0b2;
+        z-index: 5;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This element stands in for the hub's injected container at /careers/play. -->
+    <div id="hub-stage"></div>
+    <div class="dev-note">dev hub host · shared services are mocked locally</div>
+    <script type="module" src="/src/dev/main.ts"></script>
+  </body>
+</html>

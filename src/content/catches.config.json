@@ -1,0 +1,55 @@
+{
+  "$schema": "./catches.schema.json",
+  "version": 3,
+  "gameId": "cast-for-the-catch",
+  "catches": [
+    {
+      "id": "better-earnings",
+      "label": "better earnings",
+      "rarity": "common",
+      "baseValue": 100,
+      "proofFact": "Top betterhomes brokers out-earn the market average by a wide margin — uncapped, by design."
+    },
+    {
+      "id": "better-training",
+      "label": "better training",
+      "rarity": "common",
+      "baseValue": 120,
+      "proofFact": "Every new broker gets a structured academy, not a desk and a phone."
+    },
+    {
+      "id": "better-growth",
+      "label": "better growth",
+      "rarity": "uncommon",
+      "baseValue": 180,
+      "proofFact": "We've grown across the region for years running, and our brokers grow with us."
+    },
+    {
+      "id": "better-opportunities",
+      "label": "better opportunities",
+      "rarity": "rare",
+      "baseValue": 260,
+      "proofFact": "Exclusive listings and qualified leads mean your time goes into closing, not chasing."
+    },
+    {
+      "id": "better-progression",
+      "label": "better progression",
+      "rarity": "epic",
+      "baseValue": 360,
+      "proofFact": "Clear paths from broker to team lead to partner — promotion here is a plan, not a maybe."
+    },
+    {
+      "id": "interview-fast-track",
+      "label": "an interview fast-track",
+      "rarity": "legendary",
+      "baseValue": 500,
+      "proofFact": "You just hooked the rarest catch — skip the queue and talk to our team directly.",
+      "optionalReward": {
+        "type": "interview-fast-track",
+        "label": "Interview fast-track",
+        "triggersLeadCapture": true,
+        "ctaLabel": "Claim your fast-track"
+      }
+    }
+  ]
+}
