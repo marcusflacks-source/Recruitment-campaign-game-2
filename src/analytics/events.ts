@@ -6,7 +6,7 @@
  * Required events: play_start, cast, catch_landed (with catch id), play_end,
  * score_saved, reward_claimed, lead_captured, share_clicked.
  */
-import type { AnalyticsService, AnalyticsEventName, Segment } from '@hub/types';
+import type { AnalyticsService, AnalyticsEventName, Segment } from '../hub/types';
 
 export class Analytics {
   private segment: Segment | 'anonymous' = 'anonymous';

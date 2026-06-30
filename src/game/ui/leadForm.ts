@@ -8,7 +8,7 @@
  *  - to SAVE a score to a leaderboard, or
  *  - to CLAIM the "interview fast-track" catch (reward pre-attached).
  */
-import type { HubIdentity, LeadCaptureInput, Segment } from '@hub/types';
+import type { HubIdentity, LeadCaptureInput, Segment } from '../../hub/types';
 import { palette, fonts, copy } from '../../brand/theme';
 
 export interface LeadFormResult {

@@ -5,7 +5,7 @@
  * 1:1 by the real hub in production — no module change required.
  */
 import manifest from '../index';
-import type { HubContext, HubIdentity, ScoreReport } from '@hub/types';
+import type { HubContext, HubIdentity, ScoreReport } from '../hub/types';
 import { mockAuth, mockAnalytics, mockLeaderboard, mockLeads, mockOg } from './mockServices';
 
 async function boot(): Promise<void> {

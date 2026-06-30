@@ -10,7 +10,7 @@ import {
   RARITY_DIFFICULTY,
   type CatchDef,
   type Rarity,
-} from '@content/catches';
+} from '../content/catches';
 
 const RARITY_ORDER: Rarity[] = ['common', 'uncommon', 'rare', 'epic', 'legendary'];
 

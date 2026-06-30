@@ -4,7 +4,7 @@
  * head-to-head challenge ("beat 4,200") if the run answered one.
  */
 import { palette, fonts, copy } from '../../brand/theme';
-import type { CatchDef } from '@content/catches';
+import type { CatchDef } from '../../content/catches';
 
 export interface EndScreenModel {
   score: number;

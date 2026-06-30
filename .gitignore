@@ -1,7 +1,9 @@
 node_modules
 dist
+dist-lib
 dist-host
 *.local
 .DS_Store
 .vite
+.vercel
 coverage

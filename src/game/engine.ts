@@ -12,9 +12,9 @@
  * snapshot the renderer reads each frame, and an `update(now)` the host calls
  * from requestAnimationFrame. This keeps the rules unit-testable headlessly.
  */
-import type { CatchDef } from '@content/catches';
-import { findFastTrackCatch } from '@content/catches';
-import { scoreCatch, comboMultiplier } from '@shared/scoreModel';
+import type { CatchDef } from '../content/catches';
+import { findFastTrackCatch } from '../content/catches';
+import { scoreCatch, comboMultiplier } from '../shared/scoreModel';
 import { sweepMsForScore, biteWindowMsForScore } from './difficulty';
 import { pickCatch } from './catchPool';
 import { TelemetryRecorder } from './telemetry';

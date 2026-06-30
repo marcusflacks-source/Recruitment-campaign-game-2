@@ -3,7 +3,7 @@
  * recompute a plausible score: per-catch accuracy, bite hit, combo, timing.
  * The client score is included but treated as advisory by the server.
  */
-import type { RunTelemetry, TelemetryEvent } from '@hub/types';
+import type { RunTelemetry, TelemetryEvent } from '../hub/types';
 
 export const TELEMETRY_VERSION = 1;
 

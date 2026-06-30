@@ -12,9 +12,9 @@ import type {
   HubIdentity,
   ScoreReport,
   SubmitScoreResult,
-} from '@hub/types';
-import type { CatchDef } from '@content/catches';
-import { findFastTrackCatch } from '@content/catches';
+} from '../hub/types';
+import type { CatchDef } from '../content/catches';
+import { findFastTrackCatch } from '../content/catches';
 import { Analytics } from '../analytics/events';
 import { GameEngine, type RunSummary } from './engine';
 import { Renderer, type RenderSize } from './render';

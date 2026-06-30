@@ -7,7 +7,7 @@
  * The hub reads the manifest, lazy-creates the module via `create()`, then drives
  * it through init → start → onScore → teardown.
  */
-import { registerModule, type GameModuleManifest } from '@hub/registry';
+import { registerModule, type GameModuleManifest } from './hub/registry';
 import { CastForTheCatchModule, GAME_ID } from './game/module';
 
 export const manifest: GameModuleManifest = registerModule({
@@ -24,5 +24,5 @@ export default manifest;
 
 // Re-exports for the hub and for server-side validation reuse.
 export { CastForTheCatchModule, GAME_ID } from './game/module';
-export type { GameModule, GameModuleFactory, HubContext } from '@hub/types';
-export { catchConfig, validateCatchConfig } from '@content/catches';
+export type { GameModule, GameModuleFactory, HubContext } from './hub/types';
+export { catchConfig, validateCatchConfig } from './content/catches';

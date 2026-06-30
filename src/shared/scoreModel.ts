@@ -8,8 +8,8 @@
  *
  * This file is pure and dependency-free (no DOM, no Node) so it runs anywhere.
  */
-import type { Rarity } from '@content/catches';
-import { RARITY_DIFFICULTY } from '@content/catches';
+import type { Rarity } from '../content/catches';
+import { RARITY_DIFFICULTY } from '../content/catches';
 
 /** Tunables for the scoring curve. See README "Tuning difficulty". */
 export const SCORE_MODEL = {

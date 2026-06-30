@@ -23,7 +23,7 @@ import type {
   OgCardService,
   SubmitScoreInput,
   SubmitScoreResult,
-} from '@hub/types';
+} from '../hub/types';
 import { validateRun } from '../../api/_lib/validateRun';
 
 let anonCounter = 1000;

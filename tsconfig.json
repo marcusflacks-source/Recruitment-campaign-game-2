@@ -17,15 +17,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
-    "declarationDir": "dist",
-    "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "@hub/*": ["src/hub/*"],
-      "@game/*": ["src/game/*"],
-      "@content/*": ["src/content/*"],
-      "@shared/*": ["src/shared/*"]
-    }
+    "declarationDir": "dist-lib",
+    "outDir": "dist-lib"
   },
   "include": ["src", "api", "tests", "vite.config.ts"],
   "exclude": ["node_modules", "dist"]
